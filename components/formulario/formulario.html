@@ -1,0 +1,10 @@
+<template name="formulario">
+  {{#if currentUser}}
+  <div class="formulario">
+    <h1>MicroTwitter</h1>
+    <input type="text" id="nome" name="nome" placeholder="Nome">
+    <textarea id="conteudo" name="conteudo" placeholder="Mensagem" maxlength="140"></textarea>
+    <button id="enviar">Enviar</button>
+  </div>
+  {{/if}}
+</template>

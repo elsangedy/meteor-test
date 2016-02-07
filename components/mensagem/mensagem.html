@@ -1,0 +1,28 @@
+<template name="mensagens">
+  <div class="timeline">
+    <h1>Timeline</h1>
+    {{#each timeline}}
+      <hr>
+      <p class="mensagem">
+        {{conteudo}}
+        <br>
+        <small>{{nome}} {{data}}</small>
+        <br><br>
+        {{#if isOwner}}
+        <button class="toggle-private">
+          {{#if private}}
+            Privado
+          {{else}}
+            Público
+          {{/if}}
+        </button>
+        <button class="delete">Deletar</button>
+        {{/if}}
+      </p>
+    {{else}}
+      <p class="info">
+        <small>Nenhuma mensagem publicada.</small>
+      </p>
+    {{/each}}
+  </div>
+</template>
